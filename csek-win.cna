@@ -1,0 +1,188 @@
+#######################################################
+#              Cobalt_Strike_Extension_Kit            #
+#       n00bRage,n173hawk,SYN, Soloman Sklash         # 
+#######################################################
+
+
+    ###################################		         					###################################
+#######################################		         					#######################################
+  #####################################		         					#####################################
+           ############################		  Load Non-Menu Scripts		############################
+                             
+include(script_resource("scripts/non-menu"));
+#@aggressor =  ls('/opt/cobalt_strike_extension_kit/scripts/non-menu');
+#println("[+] Importing:");
+#foreach $file (@aggressor){ 
+#	include($file);
+#	println("   $file");
+#}
+include(script_resource("bof/syscalls"));
+#@bofaggressor =  ls('/opt/cobalt_strike_extension_kit/bof/syscalls');
+#println("[+] Importing:");
+#foreach $file (@bofaggressor){ 
+#	include($file);
+#	println("   $file");
+#}
+include(script_resource("bof/wmisub"));
+#@bofwmiaggressor =  ls('/opt/cobalt_strike_extension_kit/bof/wmisub');
+#println("[+] Importing:");
+#foreach $file (@bofwmiaggressor){ 
+#	include($file);
+#	println("   $file");
+#}
+include(script_resource("bof/unhook"));
+#@bofuhaggressor =  ls('/opt/cobalt_strike_extension_kit/bof/unhook/');
+#println("[+] Importing:");
+#foreach $file (@bofuhaggressor){ 
+#	include($file);
+#	println("   $file");
+#}
+
+
+
+
+    ###################################		         		###################################
+#######################################		         		#######################################
+  #####################################		         		#####################################
+           ############################		  Menus 		############################
+           
+           
+#################################################
+
+#   Define Main Menu
+
+#################################################
+
+popup beacon_top {
+
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/favorites.cna')
+include(script_resource("scripts/menuscripts/favorites.cna"));
+}
+
+#################################################
+
+#   Define QuickEnum and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Quick Enum" {
+include(script_resource("scripts/menuscripts/quickenum.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/quickenum.cna')
+
+}
+}
+
+#################################################
+
+#   Define Initial Access and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Initial Access" {
+include(script_resource("scripts/menuscripts/initialacc.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/initialacc.cna')
+
+}
+}
+
+#################################################
+
+#   Define Enumeration and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Enumeration" {
+include(script_resource("scripts/menuscripts/enum.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/enum.cna')
+
+}
+}
+
+#################################################
+
+#   Define Defense Evasion and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Defense Evasion" {
+include(script_resource("scripts/menuscripts/defev.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/defev.cna')
+
+}
+}
+
+
+#################################################
+
+#   Define Code Execution and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Code Execution" {
+include(script_resource("scripts/menuscripts/codeexec.cna")); 
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/codeexec.cna')
+
+}
+}
+
+#################################################
+
+#   Define Lateral Movement and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Lateral Movement" {
+include(script_resource("scripts/menuscripts/latmove.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/latmove.cna')
+
+}
+}
+
+#################################################
+
+#   Define Privilege Escalation and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Privilege Escalation" {
+include(script_resource("scripts/menuscripts/privesc.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/privesc.cna')
+
+}
+}
+
+#################################################
+
+#   Define Credential Access and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Credential Access" {
+include(script_resource("scripts/menuscripts/credaccess.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/credaccess.cna')
+
+}
+}
+
+
+#################################################
+
+#   Define Persistence and Direct to subscripts
+
+#################################################
+
+popup beacon_top{
+menu "csek - Persistence" {
+include(script_resource("scripts/menuscripts/persist.cna"));
+#include('/opt/cobalt_strike_extension_kit/scripts/menuscripts/persist.cna')
+
+}
+}
